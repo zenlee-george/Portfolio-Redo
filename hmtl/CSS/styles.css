@@ -1,0 +1,66 @@
+/* General */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+  }
+  html {
+    overflow-x: hidden;
+    max-width: 100%;
+    scrollbar-width: none;
+}
+body {
+    overflow-x: hidden;
+    max-width: 100%;
+    -ms-overflow-style: 2px;
+    font-family: "inter", sans-serif;
+    background-color: #eeeeee;
+    z-index: -1;
+  }
+  body::-webkit-scrollbar {
+    display: auto;
+  }
+
+/*background*/
+.noise-filter {
+    width: 100vw;
+    height: 100vh;
+    background: url("https://i.gifer.com/WmZ0.gif");
+    position: fixed;
+    pointer-events: none;
+    opacity: 0.06;
+    z-index: 9999999;
+  }
+
+/*home*/
+.home-social {
+    position: absolute;
+    top: 10px;
+    right: 60px;
+  }
+  a {
+    color: #eeeeee;
+  }
+  .home-social a {
+    text-decoration: none;
+    color: #eeeeee;
+    margin-left: 20px;
+    display: inline-block;
+    position: relative;
+    font-family: "inter", sans-serif;
+    font-weight: 200;
+  }
+  .home-social a::after {
+    content: "";
+    display: block;
+    width: 0;
+    height: 1px;
+    bottom: 50%;
+    position: absolute;
+    background-color: #eeeeee;
+    transition: 0.2s linear;
+  }
+  .home-social a:hover::after {
+    width: 100%;
+  }
+  
